@@ -73,3 +73,7 @@ unsigned int const   FragTrap::level = 1;
         std::cout << "FR4G-TP "  << _name << " attacks take " << weapons[rand() % 5] << " and hit <" << target << ">, causing <" << 25 << "> points of damage !" << std::endl;
         _energyPoint -= 25;
     }
+
+    std::string FragTrap::getName( void ) {
+        return _name;
+    }
