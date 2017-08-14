@@ -7,22 +7,21 @@ class   ClapTrap {
         unsigned int    _hitPoint;
         unsigned int    _energyPoint;
         std::string     _name;
-    public:
-        static unsigned int const   maxHitPoint;
-        static unsigned int const   maxEnergyPoint;
-        static unsigned int const   level;
-        static unsigned int const   meelDamage;
-        static unsigned int const   rangeDamage;
-        static unsigned int const   armorDamage;
+        unsigned int  _maxHitPoint;
+        unsigned int  _maxEnergyPoint;
+        unsigned int  _level;
+        unsigned int  _meelDamage;
+        unsigned int  _rangeDamage;
+        unsigned int  _armorDamage;
 // method
     public:
         ClapTrap(std::string const & name);
         ~ClapTrap( void );
-        void    rangedAttack(std::string const & target);
-        void    melleAttack(std::string const & target);
-        void    takeDamage(unsigned int amount);
-        void    beRepaired(unsigned int amount);
-        std::string getName( void );
+        unsigned int    rangedAttack(std::string const & target);
+        unsigned int    melleAttack(std::string const & target);
+        void            takeDamage(unsigned int amount);
+        void            beRepaired(unsigned int amount);
+        std::string     getName( void );
 };
 
 #endif

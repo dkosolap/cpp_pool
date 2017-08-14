@@ -11,6 +11,14 @@
         "typeinfo": "cpp",
         "memory": "cpp",
         "__functional_03": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "sstream": "cpp",
+        "__split_buffer": "cpp",
+        "bitset": "cpp",
+        "iterator": "cpp",
+        "string": "cpp",
+        "utility": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp"
     }
 }

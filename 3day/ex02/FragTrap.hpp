@@ -2,7 +2,9 @@
 # define FRAGTRAP_CLASS_H 
 # include "ClapTrap.hpp"
 
-class FragTrap : ClapTrap{
+class FragTrap : public ClapTrap{
+    public:
+    FragTrap(std::string const & name);
     void    vaulthunter_dot_exe(std::string const & target);
 };
 
