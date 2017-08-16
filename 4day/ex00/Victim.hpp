@@ -9,8 +9,8 @@ class   Victim {
         Victim(std::string const & name);
         Victim(Victim const &src);
         ~Victim();
-		Victim      &operator=(Victim const &rhs);
-        std::string getInfo( void );
+		Victim      &operator=(Victim const &cp);
+        std::string getName( void ) const;
         void        getPolymorphed( void ) const;      
 };
 

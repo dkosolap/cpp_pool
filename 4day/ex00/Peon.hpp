@@ -9,7 +9,7 @@ class   Peon : public Victim{
         Peon(Peon const &src);
         ~Peon();
 
-		Peon                &operator=(Peon const &rhs);
+		Peon                &operator=(Peon const &cp);
         void                getPolymorphed( void ) const;
 };
 
