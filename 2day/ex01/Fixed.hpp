@@ -1,25 +1,29 @@
-#ifndef FIXED_CLASS_H
-# define FIXED_CLASS_H 
+#ifndef FIXED_CLASS_HPP
+# define FIXED_CLASS_HPP 
+
 # include <iostream>
 # include <cmath>
 
-class   Fixed {
+class Fixed
+{
+	int				_fp;
+	static const int	_fb = 8;
 
-private:
-    int                 _raw;
-    static const int    _lit;
-public:
-    Fixed( void );
-    Fixed( Fixed const &cp );
-    Fixed( int var );
-    Fixed( float var );
-    ~Fixed( void );
-    int     getRawBits( void ) const;
-    void    setRawBits( int var );
-    Fixed    &operator=( Fixed const &cp );
-    float toFloat( void ) const;
-    int toInt( void ) const;
+	public:
+		Fixed( void );
+		Fixed( Fixed const  &ref );
+		Fixed( int num );
+		Fixed( float num );
+		~Fixed( void );
+
+		int			getRawBits( void ) const;
+		void		setRawBits( int const raw );
+		float		toFloat( void ) const;
+		int			toInt( void ) const;
+
+		Fixed		&operator=( Fixed const &ref );
 };
-    std::ostream    &operator<<(std::ostream & input, const Fixed & rvalue);
+
+std::ostream& operator<<(std::ostream& os, const Fixed& rf);
 
 #endif

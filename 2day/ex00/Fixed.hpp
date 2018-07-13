@@ -1,19 +1,22 @@
-#ifndef FIXED_CLASS_H
-# define FIXED_CLASS_H 
-# include <iostream>
+#ifndef FIXED_CLASS_HPP
+# define FIXED_CLASS_HPP 
 
-class   Fixed {
+#include <iostream>
 
-private:
-    int                 _raw;
-    static const int    _lit;
-public:
-    Fixed( void );
-    Fixed( Fixed const &cp );
-    ~Fixed( void );
-    int     getRawBits( void ) const;
-    void    setRawBits( int var );
-    Fixed    &operator=( Fixed const &cp );
+class Fixed
+{
+	int				_fp;
+	static const int	_fb = 8;
+
+	public:
+		Fixed( void );
+		Fixed( Fixed const  &ref );
+		~Fixed( void );
+
+		Fixed		&operator=( Fixed const &ref );
+		int			getRawBits( void ) const;
+		void		setRawBits( int const raw );
+		
 };
 
 #endif
