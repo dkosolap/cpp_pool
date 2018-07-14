@@ -7,6 +7,11 @@ int main( int argc, char *argv[] ) {
 
 	EvalExpr 	start;
 
+
+	// std::string str = "48";
+
+	// str += '5';
+	// std::cout << str << std::endl;
 	if (argc != 2) {
 		std::cout << "Wrong amount args" << std::endl;
 	}

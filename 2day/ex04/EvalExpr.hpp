@@ -8,7 +8,7 @@ class EvalExpr
 {
 	Fixed 			_res;
 	std::string		GetExpression(std::string input);
-	float			Counting(std::string input);
+	Fixed			Counting(std::string input);
 	bool			IsDelimeter(char c);
 	bool			IsOperator(char c);
 	int 			GetPriority(char s);
@@ -20,7 +20,7 @@ public:
 
 	EvalExpr 	&operator=( EvalExpr const &ref);
 	
-	float		start( std::string input );
+	Fixed		start( std::string input );
 	float		get( void ) const ;
 };
 
