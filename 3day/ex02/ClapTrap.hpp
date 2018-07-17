@@ -21,6 +21,7 @@ public:
 	~ClapTrap( void);
 	ClapTrap 	&operator=( ClapTrap const &ref );
 
+	ClapTrap( std::string name );
 	std::string	getName( void ) const;
 	void		rangedAttack( std::string const & target );
 	void		meleeAttack( std::string const & target );

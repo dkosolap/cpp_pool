@@ -4,14 +4,15 @@
 int	main() {
 
 	srand(time( 0 ));
-	ScavTrap    *lalka = new ScavTrap("lalka");
+	FragTrap    *lalka = new FragTrap("Lalka");
+	ScavTrap    *parka = new ScavTrap("Palka");
 
-	lalka->challengeNewcomer("PRO");
-	lalka->rangedAttack("PRO");
-	lalka->meleeAttack("PRO");
-	lalka->challengeNewcomer("PRO");
-	lalka->challengeNewcomer("PRO");
-	lalka->challengeNewcomer("PRO");
+	lalka->vaulthunter_dot_exe(parka->getName());
+	lalka->rangedAttack(parka->getName());
+	lalka->meleeAttack(parka->getName());
+	lalka->vaulthunter_dot_exe(parka->getName());
+	lalka->vaulthunter_dot_exe(parka->getName());
+	parka->challengeNewcomer(lalka->getName());
 	lalka->takeDamage(10);
 	lalka->takeDamage(10);
 	lalka->takeDamage(10);
@@ -26,5 +27,8 @@ int	main() {
 	lalka->beRepaired(15);
 
 	delete(lalka);
+	delete(parka);
 	return (0);
 }
+// vaulthunter_dot_exe
+// challengeNewcomer
