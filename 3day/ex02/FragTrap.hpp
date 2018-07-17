@@ -1,11 +1,20 @@
-#ifndef FRAGTRAP_CLASS_H
-# define FRAGTRAP_CLASS_H 
-# include "ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP 
+# include <iostream>
 
-class FragTrap : public ClapTrap{
-    public:
-    FragTrap(std::string const & name);
-    void    vaulthunter_dot_exe(std::string const & target);
+class FragTrap {
+
+public:
+	FragTrap( void );
+	FragTrap( FragTrap const &ref );
+	FragTrap( std::string name );
+	~FragTrap( void );
+	FragTrap	&operator=( FragTrap const &ref );
+
+
+	void		vaulthunter_dot_exe( std::string const & target );
+
+	
 };
 
 #endif

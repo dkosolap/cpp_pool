@@ -24,7 +24,6 @@ int	main() {
 	lalka->beRepaired(15);
 	lalka->beRepaired(100);
 	lalka->beRepaired(15);
-
 	delete(lalka);
 	return (0);
 }

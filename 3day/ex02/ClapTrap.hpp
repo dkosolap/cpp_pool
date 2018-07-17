@@ -1,27 +1,32 @@
-#ifndef CLAPTRAP_CLASS_H
-# define CLAPTRAP_CLASS_H 
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 # include <iostream>
 
-class   ClapTrap {
-    protected:
-        unsigned int    _hitPoint;
-        unsigned int    _energyPoint;
-        std::string     _name;
-        unsigned int  _maxHitPoint;
-        unsigned int  _maxEnergyPoint;
-        unsigned int  _level;
-        unsigned int  _meelDamage;
-        unsigned int  _rangeDamage;
-        unsigned int  _armorDamage;
-// method
-    public:
-        ClapTrap(std::string const & name);
-        ~ClapTrap( void );
-        unsigned int    rangedAttack(std::string const & target);
-        unsigned int    melleAttack(std::string const & target);
-        void            takeDamage(unsigned int amount);
-        void            beRepaired(unsigned int amount);
-        std::string     getName( void );
+class ClapTrap {
+
+protected:
+	unsigned int			_hit;
+	unsigned int			_maxHit;
+	unsigned int			_maxEnergy;
+	unsigned int			_energy;
+	unsigned int			_level;
+	unsigned int			_melleAttack;
+	unsigned int			_rangedAttack;
+	unsigned int			_armorReduction;
+	std::string				_name;
+
+public:
+	ClapTrap( void );
+	ClapTrap( ClapTrap const &ref );
+	~ClapTrap( void);
+	ClapTrap 	&operator=( ClapTrap const &ref );
+
+	std::string	getName( void ) const;
+	void		rangedAttack( std::string const & target );
+	void		meleeAttack( std::string const & target );
+	void		takeDamage( unsigned int amount );
+	void		beRepaired( unsigned int amount );
+	
 };
 
 #endif
