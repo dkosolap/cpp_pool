@@ -1,27 +1,30 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-int main( void ) {
+int	main() {
 
-    
-    ScavTrap    *lalka = new ScavTrap("lalka");
+	srand(time( 0 ));
+	ScavTrap    *lalka = new ScavTrap("lalka");
 
-    srand( time( 0 ) );
-    lalka->rangedAttack("PRO");
-    lalka->melleAttack("PRO");
-    lalka->takeDamage(10);
-    lalka->takeDamage(10);
-    lalka->takeDamage(10);
-    lalka->takeDamage(10);
-    lalka->takeDamage(100);
-    lalka->beRepaired(15);
-    lalka->beRepaired(15);
-    lalka->beRepaired(15);
-    lalka->beRepaired(15);
-    lalka->beRepaired(15);
-    lalka->beRepaired(100);
-    lalka->beRepaired(15);
+	lalka->challengeNewcomer("PRO");
+	lalka->rangedAttack("PRO");
+	lalka->meleeAttack("PRO");
+	lalka->challengeNewcomer("PRO");
+	lalka->challengeNewcomer("PRO");
+	lalka->challengeNewcomer("PRO");
+	lalka->takeDamage(10);
+	lalka->takeDamage(10);
+	lalka->takeDamage(10);
+	lalka->takeDamage(10);
+	lalka->takeDamage(100);
+	lalka->beRepaired(15);
+	lalka->beRepaired(15);
+	lalka->beRepaired(15);
+	lalka->beRepaired(15);
+	lalka->beRepaired(15);
+	lalka->beRepaired(100);
+	lalka->beRepaired(15);
 
-    delete(lalka);
-    return 0;
+	delete(lalka);
+	return (0);
 }
