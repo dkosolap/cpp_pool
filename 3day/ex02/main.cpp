@@ -30,5 +30,3 @@ int	main() {
 	delete(parka);
 	return (0);
 }
-// vaulthunter_dot_exe
-// challengeNewcomer

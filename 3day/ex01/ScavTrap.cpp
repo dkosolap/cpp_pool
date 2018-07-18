@@ -56,12 +56,12 @@ void		ScavTrap::rangedAttack( std::string const & target ) {
 }
 
 void		ScavTrap::meleeAttack( std::string const & target ) {
-	if (_energy < _rangedAttack) {
+	if (_energy < _melleAttack) {
 	    std::cout << "SCAV-TP "  << _name << " doesn't attacks <" << target << "> at melee, because haven't energy !" << std::endl;
 	    return ;
 	}
 	std::cout << "SCAV-TP "  << _name << " attacks <" << target << "> at melee, causing <" << _melleAttack << "> points of damage !" << std::endl;
-	_energy -= _rangedAttack;
+	_energy -= _melleAttack;
 }
 
 void		ScavTrap::takeDamage( unsigned int amount ) {
